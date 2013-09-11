@@ -1,0 +1,26 @@
+HMMstar::HMM simple-2-state-coding
+
+[States]
+C  coding
+N  non-coding
+
+[TransitionMatrix]
+INIT  C    0.0
+INIT  N    1.0
+C     C    0.9
+C     N    0.1
+N     N    0.9
+N     C    0.1
+C     TERM 0.0
+N     TERM 0.0001
+
+[Emits]
+coding 0
+	A	0.2 0.3 0.3 0.2
+	C	0.2 0.3 0.3 0.2
+	G	0.2 0.3 0.3 0.2
+	T	0.2 0.3 0.3 0.2
+non-coding 0
+	0.3 0.2 0.2 0.3
+
+[Ranges]
